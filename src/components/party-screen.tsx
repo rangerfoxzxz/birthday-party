@@ -27,32 +27,36 @@ const PIECES: Array<{
 export function PartyScreen({
   children,
   wide = false,
+  quiet = false,
 }: {
   children: React.ReactNode;
   wide?: boolean;
+  quiet?: boolean;
 }) {
   return (
     <div className="relative min-h-dvh overflow-hidden">
-      <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden>
-        {PIECES.map((piece) => (
-          <span
-            key={`${piece.left}-${piece.delay}`}
-            className="confetti-piece absolute top-0 block"
-            style={
-              {
-                left: piece.left,
-                width: piece.size,
-                height: piece.size * 1.35,
-                borderRadius: piece.radius,
-                background: piece.color,
-                animationDuration: piece.duration,
-                animationDelay: piece.delay,
-                "--drift": piece.drift,
-              } as CSSProperties
-            }
-          />
-        ))}
-      </div>
+      {quiet ? null : (
+        <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden>
+          {PIECES.map((piece) => (
+            <span
+              key={`${piece.left}-${piece.delay}`}
+              className="confetti-piece absolute top-0 block"
+              style={
+                {
+                  left: piece.left,
+                  width: piece.size,
+                  height: piece.size * 1.35,
+                  borderRadius: piece.radius,
+                  background: piece.color,
+                  animationDuration: piece.duration,
+                  animationDelay: piece.delay,
+                  "--drift": piece.drift,
+                } as CSSProperties
+              }
+            />
+          ))}
+        </div>
+      )}
       <div
         className={cn(
           "relative z-10 mx-auto flex min-h-dvh w-full flex-col px-5 pt-[max(1.25rem,env(safe-area-inset-top))] pb-[max(1.25rem,env(safe-area-inset-bottom))]",

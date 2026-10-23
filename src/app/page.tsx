@@ -1,5 +1,10 @@
+import { AttemptGate } from "@/components/attempt-gate";
 import { HomeScreen } from "@/components/home-screen";
 
 export default function Home() {
-  return <HomeScreen />;
+  return (
+    <AttemptGate>
+      <HomeScreen />
+    </AttemptGate>
+  );
 }
