@@ -56,7 +56,7 @@ export function ChoiceQuestion({ question }: { question: ChoiceQuestionData }) {
               <span className="grid size-8 shrink-0 place-items-center rounded-full bg-foreground/10 text-sm font-semibold">
                 {index + 1}
               </span>
-              {choice}
+              <span className={cn(question.emojiChoices && "text-3xl leading-none")}>{choice}</span>
             </button>
           );
         })}

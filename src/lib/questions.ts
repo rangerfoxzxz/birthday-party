@@ -6,6 +6,7 @@ export type ChoiceQuestion = {
   /** Clicking this choice swaps the list for `expandedChoices`. Every new choice passes. */
   expandIndex?: number;
   expandedChoices?: readonly string[];
+  emojiChoices?: boolean;
   nextHref: "/quiz/3" | "/quiz/4" | "/finale";
 };
 
@@ -21,8 +22,9 @@ export const choiceQuestions: Record<2 | 3 | 4, ChoiceQuestion> = {
   },
   3: {
     step: 3,
-    title: "ในงานนี้ควรพูดว่าอะไร",
-    choices: ["ราตรีสวัสดิ์", "สุขสันต์วันปีใหม่", "โชคดีนะ", "สุขสันต์วันเกิด"],
+    title: "ปกติ Misfortune ในชื่อใช้ Emoji อะไร",
+    choices: ["🐷", "❤️", "💜", "🍀"],
+    emojiChoices: true,
     correctIndex: 3,
     nextHref: "/quiz/4",
   },
