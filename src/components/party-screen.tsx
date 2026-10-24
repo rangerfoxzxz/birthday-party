@@ -10,18 +10,18 @@ const PIECES: Array<{
   size: number;
   radius: string;
 }> = [
-  { left: "6%", delay: "0s", duration: "11s", drift: "18px", color: "#f2c14e", size: 8, radius: "999px" },
-  { left: "14%", delay: "1.4s", duration: "13s", drift: "-16px", color: "#ff8aa3", size: 10, radius: "2px" },
-  { left: "24%", delay: "3s", duration: "10s", drift: "12px", color: "#fff4e4", size: 6, radius: "999px" },
-  { left: "33%", delay: "0.6s", duration: "14s", drift: "-20px", color: "#f2c14e", size: 7, radius: "2px" },
-  { left: "42%", delay: "2.2s", duration: "12s", drift: "22px", color: "#ff8aa3", size: 9, radius: "999px" },
-  { left: "51%", delay: "4s", duration: "11s", drift: "-10px", color: "#fff4e4", size: 5, radius: "2px" },
-  { left: "60%", delay: "1s", duration: "13s", drift: "16px", color: "#f2c14e", size: 8, radius: "999px" },
-  { left: "69%", delay: "2.8s", duration: "10.5s", drift: "-18px", color: "#ff8aa3", size: 11, radius: "2px" },
-  { left: "78%", delay: "0.2s", duration: "12.5s", drift: "14px", color: "#fff4e4", size: 6, radius: "999px" },
-  { left: "87%", delay: "3.4s", duration: "14s", drift: "-12px", color: "#f2c14e", size: 9, radius: "2px" },
-  { left: "94%", delay: "1.8s", duration: "11.5s", drift: "8px", color: "#ff8aa3", size: 7, radius: "999px" },
-  { left: "19%", delay: "5s", duration: "12s", drift: "20px", color: "#ffb3c4", size: 8, radius: "2px" },
+  { left: "6%", delay: "0s", duration: "11s", drift: "18px", color: "#c9a6ff", size: 8, radius: "999px" },
+  { left: "14%", delay: "1.4s", duration: "13s", drift: "-16px", color: "#a78bfa", size: 10, radius: "2px" },
+  { left: "24%", delay: "3s", duration: "10s", drift: "12px", color: "#f3e8ff", size: 6, radius: "999px" },
+  { left: "33%", delay: "0.6s", duration: "14s", drift: "-20px", color: "#c9a6ff", size: 7, radius: "2px" },
+  { left: "42%", delay: "2.2s", duration: "12s", drift: "22px", color: "#8b5cf6", size: 9, radius: "999px" },
+  { left: "51%", delay: "4s", duration: "11s", drift: "-10px", color: "#f3e8ff", size: 5, radius: "2px" },
+  { left: "60%", delay: "1s", duration: "13s", drift: "16px", color: "#c9a6ff", size: 8, radius: "999px" },
+  { left: "69%", delay: "2.8s", duration: "10.5s", drift: "-18px", color: "#a78bfa", size: 11, radius: "2px" },
+  { left: "78%", delay: "0.2s", duration: "12.5s", drift: "14px", color: "#ddd6fe", size: 6, radius: "999px" },
+  { left: "87%", delay: "3.4s", duration: "14s", drift: "-12px", color: "#8b5cf6", size: 9, radius: "2px" },
+  { left: "94%", delay: "1.8s", duration: "11.5s", drift: "8px", color: "#c9a6ff", size: 7, radius: "999px" },
+  { left: "19%", delay: "5s", duration: "12s", drift: "20px", color: "#ddd6fe", size: 8, radius: "2px" },
 ];
 
 export function PartyScreen({

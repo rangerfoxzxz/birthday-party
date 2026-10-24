@@ -4,42 +4,27 @@ import { cn } from "@/lib/utils";
 import { PartyPopper } from "lucide-react";
 import Link from "next/link";
 
-function Balloon({ className, color }: { className: string; color: string }) {
-  return (
-    <div className={cn("pointer-events-none absolute hidden md:block", className)} aria-hidden>
-      <div className="mx-auto h-20 w-14 rounded-[50%]" style={{ background: color }} />
-      <div className="mx-auto h-3 w-3 rotate-45 bg-inherit" style={{ background: color, marginTop: -6 }} />
-      <div className="mx-auto h-16 w-px bg-foreground/25" />
-    </div>
-  );
-}
-
-function Cake() {
-  return (
-    <svg viewBox="0 0 120 96" className="mx-auto h-24 w-28" aria-hidden>
-      <ellipse cx="60" cy="86" rx="36" ry="5" fill="oklch(0.84 0.14 88 / 0.35)" />
-      <rect x="22" y="54" width="76" height="28" rx="10" fill="#f2c14e" />
-      <rect x="30" y="40" width="60" height="22" rx="9" fill="#ff8aa3" />
-      <rect x="40" y="28" width="40" height="18" rx="8" fill="#fff4e4" />
-      <path d="M60 8c2 6-2 8 0 14" stroke="#f2c14e" strokeWidth="2" fill="none" strokeLinecap="round" />
-      <circle cx="60" cy="8" r="3.2" fill="#ffb020" />
-    </svg>
-  );
-}
-
 export function HomeScreen() {
   return (
-    <PartyScreen wide>
-      <Balloon className="top-16 left-4" color="#ff8aa3" />
-      <Balloon className="top-28 right-6" color="#f2c14e" />
-      <Balloon className="bottom-16 left-16" color="#fff4e4" />
-      <div className="m-auto w-full max-w-md">
-        <section className="rise-in rounded-[2rem] border border-foreground/10 bg-card/85 px-6 py-8 text-center shadow-[0_30px_80px_oklch(0.12_0.03_18/0.45)] backdrop-blur-sm sm:px-10 sm:py-12">
+    <PartyScreen wide quiet>
+      <div className="pointer-events-none fixed inset-0 z-0" aria-hidden>
+        <picture>
+          <source media="(orientation: landscape)" srcSet="/misfortune-birthday-16x9.jpg" />
+          <img
+            src="/misfortune-birthday-9x16.jpg"
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        </picture>
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-transparent landscape:hidden" />
+        <div className="absolute inset-0 hidden bg-[radial-gradient(ellipse_at_center,transparent_46%,oklch(0.1_0.05_305/0.55)_100%)] landscape:block" />
+      </div>
+      <div className="relative z-10 mt-auto w-full max-w-md landscape:fixed landscape:top-1/2 landscape:right-[max(1.25rem,6vw)] landscape:z-10 landscape:mt-0 landscape:-translate-y-1/2">
+        <section className="rise-in rounded-[2rem] border border-foreground/15 bg-[oklch(0.17_0.05_305/0.9)] px-6 py-8 text-center shadow-[0_30px_80px_oklch(0.12_0.06_305/0.55)] backdrop-blur-md sm:px-10 sm:py-12">
           <p className="inline-flex rounded-full border border-primary/40 bg-primary/15 px-3 py-1 text-sm font-semibold text-primary">
             26 ตุลาคม
           </p>
-          <Cake />
-          <p className="mt-2 text-sm font-medium tracking-[0.22em] text-muted-foreground">ยินดีต้อนรับ</p>
+          <p className="mt-6 text-sm font-medium tracking-[0.22em] text-muted-foreground">ยินดีต้อนรับ</p>
           <h1 className="mt-2 font-display text-5xl italic leading-none tracking-tight text-balance sm:text-6xl">
             Misfortune
           </h1>
