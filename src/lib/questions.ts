@@ -7,6 +7,8 @@ export type ChoiceQuestion = {
   expandIndex?: number;
   expandedChoices?: readonly string[];
   emojiChoices?: boolean;
+  /** Draw the correct choice so the page search box cannot find it. */
+  maskCorrect?: boolean;
   nextHref: "/quiz/3" | "/quiz/4" | "/finale";
 };
 
@@ -143,6 +145,7 @@ export const choiceQuestions: Record<2 | 3 | 4, ChoiceQuestion> = {
     title: "ไม้อะไรที่ถูกแบนออกจากช่อง",
     choices: placeChoiceAt(bannedWoodDecoys, bannedWoodAnswer, bannedWoodPosition),
     correctIndex: bannedWoodPosition - 1,
+    maskCorrect: true,
     nextHref: "/finale",
   },
 };
