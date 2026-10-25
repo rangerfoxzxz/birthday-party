@@ -59,7 +59,7 @@ export function PartyScreen({
       )}
       <div
         className={cn(
-          "relative z-10 mx-auto flex min-h-dvh w-full flex-col px-5 pt-[max(1.25rem,env(safe-area-inset-top))] pb-[max(1.25rem,env(safe-area-inset-bottom))]",
+          "relative z-10 mx-auto flex h-dvh max-h-dvh min-h-0 w-full flex-col px-5 pt-[max(1.25rem,env(safe-area-inset-top))] pb-[max(1.25rem,env(safe-area-inset-bottom))]",
           wide ? "max-w-3xl" : "max-w-xl",
         )}
       >

@@ -3,7 +3,7 @@ import { FinaleScreen } from "@/components/finale-screen";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "34",
+  title: "ขอบคุณ",
 };
 
 export default function FinalePage() {

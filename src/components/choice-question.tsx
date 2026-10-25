@@ -40,7 +40,14 @@ export function ChoiceQuestion({ question }: { question: ChoiceQuestionData }) {
   return (
     <PartyScreen>
       <QuizHeader step={question.step} title={question.title} detail={detail} />
-      <div className="mt-8 flex flex-col gap-3" role="group" aria-label={question.title}>
+      <div
+        className={cn(
+          "mt-8 flex flex-col gap-3",
+          choices.length > 8 && "min-h-0 flex-1 overflow-y-auto overscroll-contain pr-1 pb-2",
+        )}
+        role="group"
+        aria-label={question.title}
+      >
         {choices.map((choice, index) => {
           return (
             <button
@@ -50,10 +57,10 @@ export function ChoiceQuestion({ question }: { question: ChoiceQuestionData }) {
               onClick={() => pick(index)}
               className={cn(
                 buttonVariants({ variant: "outline", size: "lg" }),
-                "h-14 w-full cursor-pointer justify-start gap-3 rounded-2xl px-4 text-base",
+                "h-14 w-full shrink-0 cursor-pointer justify-start gap-3 rounded-2xl px-4 text-base",
               )}
             >
-              <span className="grid size-8 shrink-0 place-items-center rounded-full bg-foreground/10 text-sm font-semibold">
+              <span className="inline-flex h-8 min-w-8 shrink-0 items-center justify-center rounded-full bg-foreground/10 px-1.5 text-sm font-semibold tabular-nums">
                 {index + 1}
               </span>
               <span className={cn(question.emojiChoices && "text-3xl leading-none")}>{choice}</span>
